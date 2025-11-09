@@ -42,3 +42,24 @@ print(name[6:])    # TuanLinh
 print(name[6:10])  # Tuan
 
     # strip(): loại bỏ khoảng trắng ở đầu và cuối
+name = "    Thu Huong    "
+print(name) 
+print(name.strip())  # "Thu Huong"
+
+    # replace(): thay thế ký tự hoặc xâu con
+song = "baby shark doo doo doo doo doo doo"
+        # Thay thế toàn bộ
+song2 = song.replace("doo", "hi")
+print(song2)
+        # Thay thế với số lượng chỉ định
+song3 = song.replace("doo", "hi", 3)
+print(song3)
+
+    # join(): nối chuỗi
+arr = ['r','o','n','a','l','d','o']
+str1 = ' '.join(arr)
+str2 = ''.join(arr)
+str3 = '-'.join(arr)
+print(str1)  # r o n a l d o
+print(str2)  # ronaldo  
+print(str3)  # r-o-n-a-l-d-o
