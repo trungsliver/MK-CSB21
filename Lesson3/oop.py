@@ -30,6 +30,10 @@ Name: {self.name}
 Age: {self.age}
 Gender: {self.gender}
 ==================""")
+        
+    # Phương thức hát
+    def sing(self, song:str):
+        print(f"{self.name} is singing: {song}")
 
 # Khởi tạo đối tượng cụ thể
 human1 = Human("Duc Trung", 2, "male")
@@ -39,3 +43,5 @@ print(human1)
 print("Name:", human1.name)
 human1.display_info()
 human2.display_info()
+# Gọi phương thức
+human2.sing("Baby Shark")
