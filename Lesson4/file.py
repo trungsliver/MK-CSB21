@@ -13,3 +13,8 @@ with open("data.json", "w", encoding="utf-8") as f:
     # indent=4: định dạng giúp file dễ đọc
     # ensure_ascii=False: để giữ nguyên ký tự Unicode (giữ nguyên tiếng việt)
     json.dump(students, f, indent=4, ensure_ascii=False)
+
+# Đọc nội dung từ file JSON
+with open("data.json", "r", encoding="utf-8") as f:
+    data = json.load(f)
+print(data)
