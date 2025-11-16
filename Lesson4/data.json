@@ -1,0 +1,27 @@
+[
+    {
+        "name": "Minh Anh",
+        "age": 15,
+        "gender": "Male"
+    },
+    {
+        "name": "Thu Hương",
+        "age": 16,
+        "gender": "Female"
+    },
+    {
+        "name": "Lâm Khánh",
+        "age": 15,
+        "gender": "Male"
+    },
+    {
+        "name": "Tuấn Linh",
+        "age": 16,
+        "gender": "Male"
+    },
+    {
+        "name": "Đức Trung",
+        "age": 2,
+        "gender": "Male"
+    }
+]
