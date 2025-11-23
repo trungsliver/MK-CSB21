@@ -50,3 +50,16 @@ class StudentManager:
         for student in self.students:
             total += student.calculate_average()
         return total / len(self.students)
+    
+    # Lưu dữ liệu vào file
+    def save_to_file(self, filename):
+        with open(filename, "w", encoding="utf-8") as file:
+            # Ghi thông tin từng học sinh và môn học của họ vào file
+            for student in self.students:
+                # Tên học sinh
+                file.write(f"Student: {student.name}\n")
+                # Từng môn học của học sinh đó
+                for subject in student.subjects:
+                    file.write(f"  Subject: {subject.name}, Grade: {subject.grade}\n")
+                # Điểm trung bình của học sinh đó
+                file.write(f"  Average Score: {student.calculate_average()}\n\n")
