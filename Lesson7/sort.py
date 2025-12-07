@@ -31,6 +31,7 @@ def bubble_sort(arr):           # Độ phức tạp: O(n^2)
 print("Bubble Sort:", bubble_sort(arr))
 
 # ========= INSERTION SORT ==========
+    # Giống xếp bài tú lơ khơ trên tay
 def insertion_sort(arr):        # Độ phức tạp: O(n^2)
     # Duyệt từ phần tử thứ hai đến phần tử cuối cùng
     for i in range(1, len(arr)):
@@ -47,3 +48,14 @@ def insertion_sort(arr):        # Độ phức tạp: O(n^2)
     return arr
 
 print("Insertion Sort:", insertion_sort(arr))
+
+# ============= LUYỆN TẬP =============
+# Bài 1: So sánh tốc độ 3 thuật toán sắp xếp vừa học với mảng có kích thước lớn
+
+# Bài 2: Sắp xếp danh sách sản phẩm dạng dictionary (giá giảm dần)
+products = [
+    {"name": "Sữa", "price": 30},
+    {"name": "Bánh quy", "price": 20},
+    {"name": "Gạo", "price": 15},
+    {"name": "Dầu ăn", "price": 40}
+]
