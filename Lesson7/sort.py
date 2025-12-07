@@ -15,3 +15,17 @@ def selection_sort(arr):        # Độ phức tạp: O(n^2)
     return arr
 
 print("Selection Sort:", selection_sort(arr))
+
+# ========= BUBBLE SORT ==========
+def bubble_sort(arr):           # Độ phức tạp: O(n^2)
+    # Duyệt qua tất cả các phần tử trong mảng
+    for i in range(len(arr)):
+        # So sanh các phần tử cạnh nhau
+        for j in range(0, len(arr) - i - 1):
+            # Nếu phần tử hiện tại lớn hơn phần tử kế tiếp thì đổi chỗ
+            if arr[j] > arr[j + 1]:
+                # Đổi chỗ 2 phần tử
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+    return arr
+
+print("Bubble Sort:", bubble_sort(arr))
