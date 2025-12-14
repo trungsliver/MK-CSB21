@@ -3,11 +3,74 @@
 # Viết chương trình trả về mảng là phép giao tập hợp của hai mảng trên.
 # Đánh giá độ phức tạp của thuật toán
 
+    # Khởi tạo 2 danh sách
+nums1 = [i for i in range(5,16)]    # 5 đến 15
+nums2 = [i for i in range(10,21)]   # 10 dến 20
+
+    # Cách 1:
+arr1 = []       # arr1 lưu trữ phần tử chung của 2 mảng
+for item1 in nums1:
+    for item2 in nums2:
+        if item1 == item2:
+            arr1.append(item1)
+print("Giao của 2 mảng (cách 1):", arr1)
+        # Đánh giá độ phức tạp:
+            # Gọi n là kích thức nums1, m là kích thước nums2
+            # Vòng lặp ngoài chạy n lần, vòng lặp trong chạy m lần
+            # Tổng số lần lặp là n*m => độ phức tạp O(n*m)
+
+    # Cách 2:
+def binary_search(arr, target):
+    arr.sort()      # Sắp xếp mảng để áp dụng tìm kiếm nhị phân
+    left = 0
+    right = len(arr) - 1
+    while left <= right:
+        mid = (left + right) // 2
+        if arr[mid] == target:
+            return True
+        elif arr[mid] < target:
+            left = mid + 1
+        else:
+            right = mid - 1
+    return False
+
+def intersection(nums1, nums2):
+    # Danh sách kết quả
+    result = []
+    if len(nums1) < len(nums2):
+        # swap phần tử 2 danh sách => nums1 luôn là danh sách dài hơn
+        nums1, nums2 = nums2, nums1 
+    for item in nums1:
+        if binary_search(nums2, item):
+            result.append(item)
+    return result
+print("Giao của 2 mảng (cách 2):", intersection(nums1, nums2))
+        # Đánh giá độ phức tạp:
+            # Gọi n là kích thức nums1, m là kích thước nums2
+            # Hàm binary_search có độ phức tạp O(log m)
+            # Vòng lặp chạy n lần
+            # Tổng số lần lặp là n * O(log m) => độ phức tạp O(n log m)
+
 # Bài 2: Cho mảng nums gồm n quả bóng có màu đỏ, trắng, xanh.
     # Viết chương trình sắp xếp mảng này sao cho:
     # những quả bóng có màu giống nhau thì được sắp xếp cạnh nhau
     # có thứ tự từ đỏ đến trắng đến xanh
     # Đánh giá độ phức tạp của thuật toán.
+nums = ['red', 'white', 'blue', 'red', 'white', 'blue', 'red', 'white', 'blue']
+
+def sort_colors(arr): # Độ phức tạp O(n)
+    # Đếm số lượng mỗi màu
+    count_red, count_white, count_blue = 0, 0, 0
+    for item in arr:
+        if item == 'red': count_red += 1
+        if item == 'white': count_white += 1
+        if item == 'blue': count_blue += 1
+
+    # Tạo mảng mới theo đúng thứ tự
+    result = ['red']*count_red + ['white']*count_white + ['blue']*count_blue
+    return result
+
+print("Mảng sau khi sắp xếp:", sort_colors(nums))
 
 # ================= LUYỆN TẬP =================
 # Thực hiện và xác định độ phức tạp thuật toán của các bài tập sau
