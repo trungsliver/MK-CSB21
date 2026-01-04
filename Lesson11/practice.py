@@ -1,14 +1,33 @@
 # Bài 1: Tạo Stack và thực hiện push/pop
 # Yêu cầu:
 # 	- Tạo Stack
+stack = []
 # 	- Thêm các số: 1, 2, 3
+stack.append(1)
+stack.append(2)
+stack.append(3)
+print("Stack after pushes:", stack)
 # 	- Lấy ra 1 phần tử
+popped_element = stack.pop()
+print("Popped element:", popped_element)
 # 	- In Stack
+print("Current stack:", stack)
 
 # Bài 2: Đảo ngược chuỗi bằng Stack
 # Yêu cầu:
 # 	- Nhập chuỗi "python"
 # 	- Dùng Stack để đảo ngược
+input_string = "python"
+stack = []
+
+for char in input_string:
+    stack.append(char)
+
+reversed_string = ""
+while len(stack) > 0:
+    reversed_string += stack.pop()
+
+print("Reversed string:", reversed_string)
 
 # Bài 3: Kiểm tra dấu ngoặc hợp lệ
 # Chuỗi được gọi là hợp lệ nếu:
@@ -17,6 +36,24 @@
 # Gợi ý:
 #     	- Dùng stack để lưu các dấu ngoặc mở.
 #     	- Khi gặp dấu ngoặc đóng, kiểm tra xem nó có khớp với dấu ngoặc mở trên cùng của stack không.
+def is_valid_parentheses(input:str):
+    stack = []
+    for char in input:
+        if char in "([{":
+            stack.append(char)
+        elif char in ")]}":
+            if len(stack) == 0:
+                return False
+            top = stack.pop()
+    return len(stack) == 0
+
+str1 = "([]){}"     # Hợp lệ
+str2 = "([))]"      # Không hợp lệ
+str3 = ")([]"       # Không hợp lệ
+print(f"{str1} is valid: {is_valid_parentheses(str1)}")
+print(f"{str2} is valid: {is_valid_parentheses(str2)}")
+print(f"{str3} is valid: {is_valid_parentheses(str3)}")
+
 
 # Bài 4: Đóng vai trò là 1 lập trình viên xây dựng ứng dụng web đơn giản. Hãy phát triển 2 chức năng:
 # 	- Back: quay lại trang web trước đó
