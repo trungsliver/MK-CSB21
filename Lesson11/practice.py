@@ -60,3 +60,54 @@ print(f"{str3} is valid: {is_valid_parentheses(str3)}")
 # 	- Forward: tiến tới trang web bạn vừa quay lại
 # Yêu cầu: xây dựng lớp Browser có 3 phương thức (visit_page, back, forward)
 # Gợi ý: sử dụng 2 stack để lưu lịch sử back và lịch sử forward
+
+class Browser:
+    # Hàm khởi tạo
+    def __init__(self):
+        # Stack lưu lịch sử web đã truy cập
+        self.back_stack = []
+        # Stack lưu lịch sử web đã quay lại
+        self.forward_stack = []
+
+    # Phương thức truy cập website mới
+    def visit_page(self, url):
+        self.back_stack.append(url)
+        self.forward_stack.clear()  # Xóa lịch sử forward khi truy cập trang mới
+        print(f"Visited: {url}")
+
+    # Phương thức quay lại trang trước đó
+    def back(self):
+        if len(self.back_stack) > 1:
+            current_page = self.back_stack.pop()
+            self.forward_stack.append(current_page)
+            print(f"Going back to: {self.back_stack[-1]}")
+        else:
+            print("No previous page to go back to.")
+
+    # Phương thức tiến tới trang đã quay lại
+    def forward(self):
+        if len(self.forward_stack) > 0:
+            next_page = self.forward_stack.pop()
+            self.back_stack.append(next_page)
+            print(f"Going forward to: {next_page}")
+        else:
+            print("No forward page to go to.")
+
+# Testing
+    # Khởi tạo browser
+browser = Browser()
+
+    # Truy cập các trang web
+browser.visit_page("www.google.com")
+browser.visit_page("www.facebook.com")
+browser.visit_page("www.youtube.com")
+browser.visit_page("www.github.com")
+
+    # Quay lại 2 trang
+browser.back()
+browser.back()
+
+    # Tiến tới 1 trang
+browser.forward()
+browser.forward()
+browser.forward()  # Thử tiến tới khi không có trang forward
