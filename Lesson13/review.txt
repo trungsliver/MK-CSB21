@@ -1,0 +1,50 @@
+=============== REVIEW KIẾN THỨC ===============
+
+1. Buổi 1: Python cơ bản
+    - Variables (biến số): các quy tắc đặt tên
+    - Data Types (kiểu dữ liệu): int, float, string, boolean
+    - Operators: các phép toán cơ bản, biểu thức logic, phép so sánh
+    - if else statement (câu điều kiện): 3 dạng
+    - Vòng lặp: for - while
+
+2. Buổi 2: List/Array, Function, files
+    - List/Array (danh sách): CRUD, sort, min/max, ...
+    - Function (hàm//chương trình con): tạo hàm, truyền tham số, trả về giá trị
+    - Files: Đọc - ghi file
+
+3. Buổi 3 + 4: OOP - Lập trình hướng đối tượng
+    - Khái niệm: mô tả các đối tượng thực tế vào chương trình máy tính
+    - Thuộc tính (đặc điểm), phương thức (hành động)
+    - 4 tính chất: đóng gói, kế thừa, đa hình, trừu tượng
+
+4. Buổi 5: Thuật toán
+    - Khái niệm, tính chất
+    - Phân tích tính hiệu quả: độ phức tạp, mức sử dụng tài nguyên
+    - Đánh giá độ phức tạp
+
+5. Buổi 6: Thuật toán tìm kiếm
+    - Tìm kiếm nhị phân (Binary Search) - game đoán số
+    - Tìm kiếm tuyến tính (Linear Search)
+
+6. Buổi 7: Thuật toán sắp xếp
+    - Sắp xếp chèn (insertion sort)
+    - Sắp xếp bong bóng / nổi bọt (bubble sort)
+
+7. Buổi 8+9: Ôn tập và kiểm tra
+
+8. Buổi 10: Tập hợp và ánh xạ
+    - Cấu trúc dữ liệu set (tập hợp)
+    - Cấu trúc dữ liệu map (ánh xạ)
+    - Dictionary và ứng dụng
+
+9. Buổi 11: Ngăn xếp (Stack)
+    - Nguyên tắc hoạt động: LIFO - Last in First out
+    - Các thao tác cơ bản
+    - Ứng dụng thực tế: giả lập trình duyệt
+
+10. Buổi 12: Hàng đợi (Queue)
+    - Nguyên tắc hoạt động: FIFO - First in First out
+    - Các thao tác cơ bản trên Queue
+    - Ứng dụng thực tế: MP3 player
+
+11. Buổi 13 + 14: Ôn tập và kiểm tra
