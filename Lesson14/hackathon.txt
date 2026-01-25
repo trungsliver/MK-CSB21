@@ -1,0 +1,11 @@
+Quy tắc đặt tên folder: [Tenlop]_[HoTen]_hackathon
+Ví dụ: CSB21_BuiDucTrung_hackathon
+
+Cấu trúc folder:
+    bai1.py
+    bai2.py
+    bai3.py
+
+Đề bài được gửi trong zalo
+
+Hạn nộp: 19h00
